@@ -1,4 +1,4 @@
-package ExercisePg63;
+package ch3.ExercisePg63;
 
 public class Hobbits {
     String name;
