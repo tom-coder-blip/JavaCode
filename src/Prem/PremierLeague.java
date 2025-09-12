@@ -28,6 +28,19 @@ public class PremierLeague {
         }
     }
 
+    public boolean allTeamsPlayed() {
+        for (Team t : teams) {
+            if (t.getMatchesThisWeek() == 0) return false;
+        }
+        return true;
+    }
+
+    public void resetGameweek() {
+        for (Team t : teams) {
+            t.resetWeeklyMatches();
+        }
+    }
+
     private Team findTeam(String name) {
         for (Team t : teams) {
             if (t.getName().equalsIgnoreCase(name)) return t;
